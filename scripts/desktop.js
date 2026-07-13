@@ -134,3 +134,14 @@
   window.addEventListener('resize', requestControlsUpdate);
   requestAnimationFrame(updateControls);
 })();
+
+(() => {
+  const stylesheet = document.createElement('link');
+  stylesheet.rel = 'stylesheet';
+  stylesheet.href = 'live-sites.css';
+  document.head.append(stylesheet);
+
+  const script = document.createElement('script');
+  script.src = 'scripts/live-sites.js';
+  document.body.append(script);
+})();
