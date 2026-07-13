@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#060a0f" />
+  <meta name="description" content="DizZy Systems Atlas — an interactive map of backend platforms, automation products, AI systems, mobile applications and digital experiences by Dimash Janibekov." />
+  <meta property="og:title" content="DizZy Systems Atlas" />
+  <meta property="og:description" content="Systems, products and experiments connected into one engineering atlas." />
+  <title>DizZy Systems Atlas — Systems, connected</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="loader" aria-hidden="true">
+    <div class="loader__mark"><span>D</span><i></i><span>A</span></div>
+    <div class="loader__copy">
+      <b>DIZZY SYSTEMS ATLAS</b>
+      <small>INDEXING SYSTEMS / 2026</small>
+    </div>
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <canvas id="field-canvas" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span>OPEN</span></div>
+  <div class="page-progress" aria-hidden="true"><span></span></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="DizZy Systems Atlas home">
+      <span class="brand__mark">D/SA</span>
+      <span class="brand__copy"><strong>DIZZY</strong><small>SYSTEMS ATLAS</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#atlas">Atlas</a>
+      <a href="#systems">Systems</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#about">Operator</a>
+    </nav>
+    <div class="header-actions">
+      <span class="index-status"><i></i><b id="header-count">26</b> indexed</span>
+      <a class="header-link magnetic" href="https://github.com/DizzyZ7" target="_blank" rel="noreferrer">GitHub <b>↗</b></a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="menu-panel" aria-hidden="true">
+    <div class="menu-panel__inner">
+      <p class="micro">ONE OPERATOR / MANY SYSTEMS</p>
+      <nav>
+        <a href="#atlas"><small>01</small><span>Atlas</span></a>
+        <a href="#systems"><small>02</small><span>Systems</span></a>
+        <a href="#experiences"><small>03</small><span>Experiences</span></a>
+        <a href="#about"><small>04</small><span>Operator</span></a>
+      </nav>
+      <div class="menu-meta"><span>Backend · Automation · AI</span><span>Almaty / Remote</span></div>
+    </div>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__meta hero__meta--top">
+        <p class="eyebrow">Engineering index / 2026 edition</p>
+        <p>A navigable map of production-oriented platforms, product MVPs, automation tools and experimental interfaces.</p>
+      </div>
+
+      <h1 class="hero__title" aria-label="Systems, connected">
+        <span class="hero__line">SYSTEMS,</span>
+        <span class="hero__line hero__line--outline">CONNECTED.</span>
+      </h1>
+
+      <div class="hero__orbit" data-cursor="EXPLORE">
+        <div class="orbit orbit--one"></div>
+        <div class="orbit orbit--two"></div>
+        <div class="orbit orbit--three"></div>
+        <div class="hero-core">
+          <span>DZ</span>
+          <small>SYSTEM OPERATOR</small>
+          <i></i>
+        </div>
+        <button class="hero-node hero-node--one" type="button" data-project="stormrelay"><small>OPS</small><strong>StormRelay</strong></button>
+        <button class="hero-node hero-node--two" type="button" data-project="verdictmesh"><small>AI</small><strong>VerdictMesh</strong></button>
+        <button class="hero-node hero-node--three" type="button" data-project="ai-memo"><small>PRODUCT</small><strong>AI Memo</strong></button>
+        <button class="hero-node hero-node--four" type="button" data-project="signalbox"><small>GO</small><strong>SignalBox</strong></button>
+      </div>
+
+      <div class="hero__footer">
+        <div><strong id="stat-projects">26</strong><span>Indexed systems</span></div>
+        <div><strong>10</strong><span>Engineering domains</span></div>
+        <div><strong>08</strong><span>Digital experiences</span></div>
+        <a class="hero__cta magnetic" href="#atlas">Enter the atlas <b>↓</b></a>
+      </div>
+    </section>
+
+    <section class="manifest section-shell">
+      <p class="section-index">00 / Operating principle</p>
+      <div class="manifest__grid">
+        <h2>I do not collect technologies. I connect them into systems that remove manual work, protect decisions and make products operable.</h2>
+        <div class="manifest__copy">
+          <p>The atlas is organized by the role each project plays: ingesting signals, making decisions, automating work, delivering products or shaping an experience.</p>
+          <div class="manifest__tags"><span>Architecture</span><span>Automation</span><span>Auditability</span><span>Product thinking</span></div>
+        </div>
+      </div>
+      <div class="manifest__rule"><span></span></div>
+    </section>
+
+    <section class="atlas" id="atlas">
+      <div class="atlas__head section-shell">
+        <div>
+          <p class="section-index">01 / Interactive topology</p>
+          <h2>Navigate by signal.</h2>
+        </div>
+        <p>Every node is a real repository or a finished digital experience. Select a system to inspect its problem, architecture and stack.</p>
+      </div>
+
+      <div class="atlas-shell section-shell">
+        <div class="atlas-toolbar">
+          <label class="search-box">
+            <span>SEARCH</span>
+            <input id="project-search" type="search" placeholder="Project, stack or domain" autocomplete="off" />
+            <kbd>/</kbd>
+          </label>
+          <div class="view-switch" role="group" aria-label="Atlas display mode">
+            <button class="view-button is-active" type="button" data-view="graph">Graph</button>
+            <button class="view-button" type="button" data-view="list">List</button>
+          </div>
+        </div>
+
+        <div class="category-strip" id="category-strip" aria-label="Project categories"></div>
+
+        <div class="atlas-stage" data-view="graph">
+          <canvas id="atlas-canvas" aria-label="Interactive project topology"></canvas>
+          <div class="atlas-crosshair" aria-hidden="true"><i></i><i></i></div>
+          <div class="atlas-hud atlas-hud--left"><small>ACTIVE FILTER</small><strong id="active-filter-label">ALL SYSTEMS</strong></div>
+          <div class="atlas-hud atlas-hud--right"><small>VISIBLE NODES</small><strong id="visible-count">26</strong></div>
+          <button class="atlas-reset" type="button">RESET FIELD</button>
+        </div>
+
+        <div class="atlas-list" id="atlas-list" hidden></div>
+      </div>
+    </section>
+
+    <section class="systems" id="systems">
+      <div class="systems__head section-shell">
+        <div>
+          <p class="section-index">02 / Deep builds</p>
+          <h2>Systems with operational weight.</h2>
+        </div>
+        <p>Selected platforms where architecture, reliability, security and product behavior matter more than a polished landing page.</p>
+      </div>
+      <div class="featured-grid section-shell" id="featured-grid"></div>
+    </section>
+
+    <section class="index-section">
+      <div class="index-section__head section-shell">
+        <div>
+          <p class="section-index">03 / Complete index</p>
+          <h2>Filter the repository field.</h2>
+        </div>
+        <div class="index-sort">
+          <button class="sort-button is-active" type="button" data-sort="featured">Featured first</button>
+          <button class="sort-button" type="button" data-sort="alpha">A—Z</button>
+          <button class="sort-button" type="button" data-sort="category">By domain</button>
+        </div>
+      </div>
+      <div class="project-grid section-shell" id="project-grid"></div>
+      <div class="empty-state section-shell" id="empty-state" hidden><span>NO SIGNAL</span><p>No projects match the current query.</p><button type="button" id="clear-filters">Clear filters</button></div>
+    </section>
+
+    <section class="matrix section-shell">
+      <p class="section-index">04 / Capability matrix</p>
+      <div class="matrix__header">
+        <h2>From incoming signal to maintained system.</h2>
+        <p>The strongest projects cover the complete path: input, domain logic, persistence, background processing, observability, security and operator experience.</p>
+      </div>
+      <div class="matrix-table" role="table" aria-label="Capability matrix">
+        <div class="matrix-row matrix-row--head" role="row"><span>Layer</span><span>Typical tools</span><span>Proof in atlas</span></div>
+        <div class="matrix-row" role="row"><strong>01 / Ingestion</strong><span>REST, webhooks, MQTT, order books, video</span><span>SignalBox · StormRelay · Voice Runtime</span></div>
+        <div class="matrix-row" role="row"><strong>02 / Decisions</strong><span>Rules, forecasts, RAG, risk engines</span><span>VerdictMesh · Cashflow Copilot · Support Orchestrator</span></div>
+        <div class="matrix-row" role="row"><strong>03 / State</strong><span>PostgreSQL, SQLite, Redis, pgvector</span><span>HomeLedger · AI Memo · WorkNest</span></div>
+        <div class="matrix-row" role="row"><strong>04 / Delivery</strong><span>Queues, Telegram, HTTP, email, mobile</span><span>StormRelay · SignalBox · Lead Gen Bot</span></div>
+        <div class="matrix-row" role="row"><strong>05 / Operations</strong><span>Metrics, traces, CI, backups, tests</span><span>StormRelay · TelcoNet · QA E2E</span></div>
+      </div>
+    </section>
+
+    <section class="experiences" id="experiences">
+      <div class="experiences__head section-shell">
+        <div>
+          <p class="section-index">05 / Digital experiences</p>
+          <h2>Eight industries. Eight visual systems.</h2>
+        </div>
+        <p>A focused series exploring how motion, interaction and information architecture change across different brands and industries.</p>
+      </div>
+      <div class="experience-rail" id="experience-rail"></div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about__grid section-shell">
+        <div class="about__portrait" aria-hidden="true">
+          <div class="portrait-field"><i></i><i></i><i></i><i></i><span>DZ</span></div>
+          <div class="portrait-label"><small>OPERATOR</small><strong>DIMASH JANIBEKOV</strong></div>
+        </div>
+        <div class="about__copy">
+          <p class="section-index">06 / Operator</p>
+          <h2>Fullstack / Backend / Automation Developer.</h2>
+          <p>I build backend systems, automation platforms, Telegram products, AI tools and product MVPs. The common theme is operational clarity: explicit state, reliable delivery, measurable behavior and interfaces that explain the system.</p>
+          <div class="about__columns">
+            <div><small>CORE</small><span>Python · Go · TypeScript</span><span>FastAPI · Next.js · PostgreSQL</span><span>Redis · Docker · Linux</span></div>
+            <div><small>SPECIALITY</small><span>Event-driven systems</span><span>Business automation</span><span>AI / RAG · Observability</span></div>
+          </div>
+          <div class="about__links">
+            <a class="magnetic" href="https://github.com/DizzyZ7" target="_blank" rel="noreferrer">GitHub <b>↗</b></a>
+            <a class="magnetic" href="https://t.me/dizzy_dev" target="_blank" rel="noreferrer">Telegram <b>↗</b></a>
+            <a class="magnetic" href="https://www.linkedin.com/in/dimash-janibekov-80a90b386" target="_blank" rel="noreferrer">LinkedIn <b>↗</b></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section section-shell">
+      <p class="section-index">07 / Next system</p>
+      <div class="contact-section__grid">
+        <h2>Have a workflow that should become a product?</h2>
+        <div>
+          <p>Send the current process, the pain points and the systems it must connect. I will turn it into an architecture, an MVP path and a working implementation.</p>
+          <a class="contact-button magnetic" href="https://t.me/dizzy_dev" target="_blank" rel="noreferrer"><span>Start a conversation</span><b>↗</b></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="detail-drawer" aria-hidden="true" aria-label="Project details">
+    <button class="drawer-close" type="button" aria-label="Close project details"><span></span><span></span></button>
+    <div class="drawer-scroll">
+      <div class="drawer-topline"><span class="drawer-index">SYS / 01</span><span class="drawer-status">STATUS</span></div>
+      <div class="drawer-accent"></div>
+      <p class="drawer-domain">DOMAIN</p>
+      <h2 class="drawer-title">Project title</h2>
+      <p class="drawer-summary">Project summary.</p>
+      <div class="drawer-section">
+        <small>THE PROBLEM</small>
+        <p class="drawer-problem"></p>
+      </div>
+      <div class="drawer-section">
+        <small>ARCHITECTURE</small>
+        <div class="architecture-flow" id="drawer-architecture"></div>
+      </div>
+      <div class="drawer-section">
+        <small>STACK</small>
+        <div class="drawer-tags" id="drawer-stack"></div>
+      </div>
+      <div class="drawer-section">
+        <small>ENGINEERING SIGNALS</small>
+        <ul class="drawer-signals" id="drawer-signals"></ul>
+      </div>
+      <a class="drawer-link" href="#" target="_blank" rel="noreferrer"><span>Open repository</span><b>↗</b></a>
+      <p class="drawer-private" hidden>Source code is currently private. The system remains indexed as a completed case.</p>
+    </div>
+  </aside>
+  <div class="drawer-backdrop" aria-hidden="true"></div>
+
+  <footer class="footer">
+    <div class="footer__marquee"><span>DIZZY SYSTEMS ATLAS / SYSTEMS, CONNECTED / DIZZY SYSTEMS ATLAS / SYSTEMS, CONNECTED /</span></div>
+    <div class="footer__row section-shell"><span>DIMASH JANIBEKOV · 2026</span><span>BACKEND · AUTOMATION · AI · PRODUCT</span><a href="#top">RETURN TO ORIGIN ↑</a></div>
+  </footer>
+
+  <script src="scripts/projects.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
