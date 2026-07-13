@@ -10,14 +10,12 @@
   <title>DizZy Systems Atlas — Systems, connected</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="desktop.css" />
 </head>
 <body>
   <div class="loader" aria-hidden="true">
     <div class="loader__mark"><span>D</span><i></i><span>A</span></div>
-    <div class="loader__copy">
-      <b>DIZZY SYSTEMS ATLAS</b>
-      <small>INDEXING SYSTEMS / 2026</small>
-    </div>
+    <div class="loader__copy"><b>DIZZY SYSTEMS ATLAS</b><small>INDEXING SYSTEMS / 2026</small></div>
     <div class="loader__bar"><span></span></div>
   </div>
 
@@ -33,10 +31,7 @@
       <span class="brand__copy"><strong>DIZZY</strong><small>SYSTEMS ATLAS</small></span>
     </a>
     <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="#atlas">Atlas</a>
-      <a href="#systems">Systems</a>
-      <a href="#experiences">Experiences</a>
-      <a href="#about">Operator</a>
+      <a href="#atlas">Atlas</a><a href="#systems">Systems</a><a href="#experiences">Experiences</a><a href="#about">Operator</a>
     </nav>
     <div class="header-actions">
       <span class="index-status"><i></i><b id="header-count">26</b> indexed</span>
@@ -65,27 +60,18 @@
         <p class="eyebrow">Engineering index / 2026 edition</p>
         <p>A navigable map of production-oriented platforms, product MVPs, automation tools and experimental interfaces.</p>
       </div>
-
       <h1 class="hero__title" aria-label="Systems, connected">
         <span class="hero__line">SYSTEMS,</span>
         <span class="hero__line hero__line--outline">CONNECTED.</span>
       </h1>
-
       <div class="hero__orbit" data-cursor="EXPLORE">
-        <div class="orbit orbit--one"></div>
-        <div class="orbit orbit--two"></div>
-        <div class="orbit orbit--three"></div>
-        <div class="hero-core">
-          <span>DZ</span>
-          <small>SYSTEM OPERATOR</small>
-          <i></i>
-        </div>
+        <div class="orbit orbit--one"></div><div class="orbit orbit--two"></div><div class="orbit orbit--three"></div>
+        <div class="hero-core"><span>DZ</span><small>SYSTEM OPERATOR</small><i></i></div>
         <button class="hero-node hero-node--one" type="button" data-project="stormrelay"><small>OPS</small><strong>StormRelay</strong></button>
         <button class="hero-node hero-node--two" type="button" data-project="verdictmesh"><small>AI</small><strong>VerdictMesh</strong></button>
         <button class="hero-node hero-node--three" type="button" data-project="ai-memo"><small>PRODUCT</small><strong>AI Memo</strong></button>
         <button class="hero-node hero-node--four" type="button" data-project="signalbox"><small>GO</small><strong>SignalBox</strong></button>
       </div>
-
       <div class="hero__footer">
         <div><strong id="stat-projects">26</strong><span>Indexed systems</span></div>
         <div><strong>10</strong><span>Engineering domains</span></div>
@@ -108,28 +94,18 @@
 
     <section class="atlas" id="atlas">
       <div class="atlas__head section-shell">
-        <div>
-          <p class="section-index">01 / Interactive topology</p>
-          <h2>Navigate by signal.</h2>
-        </div>
+        <div><p class="section-index">01 / Interactive topology</p><h2>Navigate by signal.</h2></div>
         <p>Every node is a real repository or a finished digital experience. Select a system to inspect its problem, architecture and stack.</p>
       </div>
-
       <div class="atlas-shell section-shell">
         <div class="atlas-toolbar">
-          <label class="search-box">
-            <span>SEARCH</span>
-            <input id="project-search" type="search" placeholder="Project, stack or domain" autocomplete="off" />
-            <kbd>/</kbd>
-          </label>
+          <label class="search-box"><span>SEARCH</span><input id="project-search" type="search" placeholder="Project, stack or domain" autocomplete="off" /><kbd>/</kbd></label>
           <div class="view-switch" role="group" aria-label="Atlas display mode">
             <button class="view-button is-active" type="button" data-view="graph">Graph</button>
             <button class="view-button" type="button" data-view="list">List</button>
           </div>
         </div>
-
         <div class="category-strip" id="category-strip" aria-label="Project categories"></div>
-
         <div class="atlas-stage" data-view="graph">
           <canvas id="atlas-canvas" aria-label="Interactive project topology"></canvas>
           <div class="atlas-crosshair" aria-hidden="true"><i></i><i></i></div>
@@ -137,17 +113,13 @@
           <div class="atlas-hud atlas-hud--right"><small>VISIBLE NODES</small><strong id="visible-count">26</strong></div>
           <button class="atlas-reset" type="button">RESET FIELD</button>
         </div>
-
         <div class="atlas-list" id="atlas-list" hidden></div>
       </div>
     </section>
 
     <section class="systems" id="systems">
       <div class="systems__head section-shell">
-        <div>
-          <p class="section-index">02 / Deep builds</p>
-          <h2>Systems with operational weight.</h2>
-        </div>
+        <div><p class="section-index">02 / Deep builds</p><h2>Systems with operational weight.</h2></div>
         <p>Selected platforms where architecture, reliability, security and product behavior matter more than a polished landing page.</p>
       </div>
       <div class="featured-grid section-shell" id="featured-grid"></div>
@@ -155,10 +127,7 @@
 
     <section class="index-section">
       <div class="index-section__head section-shell">
-        <div>
-          <p class="section-index">03 / Complete index</p>
-          <h2>Filter the repository field.</h2>
-        </div>
+        <div><p class="section-index">03 / Complete index</p><h2>Filter the repository field.</h2></div>
         <div class="index-sort">
           <button class="sort-button is-active" type="button" data-sort="featured">Featured first</button>
           <button class="sort-button" type="button" data-sort="alpha">A—Z</button>
@@ -171,10 +140,7 @@
 
     <section class="matrix section-shell">
       <p class="section-index">04 / Capability matrix</p>
-      <div class="matrix__header">
-        <h2>From incoming signal to maintained system.</h2>
-        <p>The strongest projects cover the complete path: input, domain logic, persistence, background processing, observability, security and operator experience.</p>
-      </div>
+      <div class="matrix__header"><h2>From incoming signal to maintained system.</h2><p>The strongest projects cover the complete path: input, domain logic, persistence, background processing, observability, security and operator experience.</p></div>
       <div class="matrix-table" role="table" aria-label="Capability matrix">
         <div class="matrix-row matrix-row--head" role="row"><span>Layer</span><span>Typical tools</span><span>Proof in atlas</span></div>
         <div class="matrix-row" role="row"><strong>01 / Ingestion</strong><span>REST, webhooks, MQTT, order books, video</span><span>SignalBox · StormRelay · Voice Runtime</span></div>
@@ -187,13 +153,18 @@
 
     <section class="experiences" id="experiences">
       <div class="experiences__head section-shell">
-        <div>
-          <p class="section-index">05 / Digital experiences</p>
-          <h2>Eight industries. Eight visual systems.</h2>
-        </div>
+        <div><p class="section-index">05 / Digital experiences</p><h2>Eight industries. Eight visual systems.</h2></div>
         <p>A focused series exploring how motion, interaction and information architecture change across different brands and industries.</p>
       </div>
-      <div class="experience-rail" id="experience-rail"></div>
+      <div class="experience-toolbar section-shell" aria-label="Digital experience navigation">
+        <span class="experience-hint"><i></i> Wheel, drag or use arrows</span>
+        <div class="experience-actions">
+          <button id="experience-prev" type="button" aria-label="Previous digital experience">←</button>
+          <span id="experience-progress" aria-live="polite">01 / 08</span>
+          <button id="experience-next" type="button" aria-label="Next digital experience">→</button>
+        </div>
+      </div>
+      <div class="experience-rail" id="experience-rail" tabindex="0" aria-label="Digital experience cases"></div>
     </section>
 
     <section class="about" id="about">
@@ -223,10 +194,7 @@
       <p class="section-index">07 / Next system</p>
       <div class="contact-section__grid">
         <h2>Have a workflow that should become a product?</h2>
-        <div>
-          <p>Send the current process, the pain points and the systems it must connect. I will turn it into an architecture, an MVP path and a working implementation.</p>
-          <a class="contact-button magnetic" href="https://t.me/dizzy_dev" target="_blank" rel="noreferrer"><span>Start a conversation</span><b>↗</b></a>
-        </div>
+        <div><p>Send the current process, the pain points and the systems it must connect. I will turn it into an architecture, an MVP path and a working implementation.</p><a class="contact-button magnetic" href="https://t.me/dizzy_dev" target="_blank" rel="noreferrer"><span>Start a conversation</span><b>↗</b></a></div>
       </div>
     </section>
   </main>
@@ -236,25 +204,11 @@
     <div class="drawer-scroll">
       <div class="drawer-topline"><span class="drawer-index">SYS / 01</span><span class="drawer-status">STATUS</span></div>
       <div class="drawer-accent"></div>
-      <p class="drawer-domain">DOMAIN</p>
-      <h2 class="drawer-title">Project title</h2>
-      <p class="drawer-summary">Project summary.</p>
-      <div class="drawer-section">
-        <small>THE PROBLEM</small>
-        <p class="drawer-problem"></p>
-      </div>
-      <div class="drawer-section">
-        <small>ARCHITECTURE</small>
-        <div class="architecture-flow" id="drawer-architecture"></div>
-      </div>
-      <div class="drawer-section">
-        <small>STACK</small>
-        <div class="drawer-tags" id="drawer-stack"></div>
-      </div>
-      <div class="drawer-section">
-        <small>ENGINEERING SIGNALS</small>
-        <ul class="drawer-signals" id="drawer-signals"></ul>
-      </div>
+      <p class="drawer-domain">DOMAIN</p><h2 class="drawer-title">Project title</h2><p class="drawer-summary">Project summary.</p>
+      <div class="drawer-section"><small>THE PROBLEM</small><p class="drawer-problem"></p></div>
+      <div class="drawer-section"><small>ARCHITECTURE</small><div class="architecture-flow" id="drawer-architecture"></div></div>
+      <div class="drawer-section"><small>STACK</small><div class="drawer-tags" id="drawer-stack"></div></div>
+      <div class="drawer-section"><small>ENGINEERING SIGNALS</small><ul class="drawer-signals" id="drawer-signals"></ul></div>
       <a class="drawer-link" href="#" target="_blank" rel="noreferrer"><span>Open repository</span><b>↗</b></a>
       <p class="drawer-private" hidden>Source code is currently private. The system remains indexed as a completed case.</p>
     </div>
@@ -268,5 +222,6 @@
 
   <script src="scripts/projects.js"></script>
   <script src="scripts/app.js"></script>
+  <script src="scripts/desktop.js"></script>
 </body>
 </html>
