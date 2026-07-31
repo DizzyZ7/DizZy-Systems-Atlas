@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#0b1112" />
   <meta name="color-scheme" content="dark" />
   <meta name="robots" content="index,follow" />
@@ -16,19 +16,60 @@
   <meta name="twitter:card" content="summary" />
   <title>DizZy Systems Atlas — Engineering systems map</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260731-3" />
+  <link rel="stylesheet" href="styles-v4.css?v=20260731-4" />
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"CollectionPage","name":"DizZy Systems Atlas","url":"https://dizzyz7.github.io/DizZy-Systems-Atlas/","description":"Engineering atlas of systems by Dimash Janibekov","author":{"@type":"Person","name":"Dimash Janibekov","alternateName":"DizZy","url":"https://github.com/DizzyZ7"}}
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><div class="shell header-inner"><a class="brand" href="#top" aria-label="DizZy Systems Atlas"><span class="brand-mark">D/SA</span><span><strong>DizZy</strong><small>Systems Atlas</small></span></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="#atlas" data-ui="navMap"></a><a href="#systems" data-ui="navSystems"></a><a href="#coverage" data-ui="navCoverage"></a><a href="#experiences" data-ui="navExperiences"></a><a href="#about" data-ui="navAbout"></a></nav><div class="header-actions"><div class="language-switch" role="group" aria-label="Language"><button type="button" data-lang="ru" aria-pressed="true">RU</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div><a class="header-link desktop-only" href="https://dizzyz7.github.io/dimashjanibekov.github.io/" target="_blank" rel="noopener noreferrer" data-ui="portfolio"></a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button></div></div></header>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="DizZy Systems Atlas"><span class="brand-mark">D/SA</span><span><strong>DizZy</strong><small>Systems Atlas</small></span></a>
+      <nav class="desktop-nav" aria-label="Primary navigation"><a href="#atlas" data-ui="navMap"></a><a href="#systems" data-ui="navSystems"></a><a href="#coverage" data-ui="navCoverage"></a><a href="#experiences" data-ui="navExperiences"></a><a href="#about" data-ui="navAbout"></a></nav>
+      <div class="header-actions"><div class="language-switch" role="group" aria-label="Language"><button type="button" data-lang="ru" aria-pressed="true">RU</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div><a class="header-link desktop-only" href="https://dizzyz7.github.io/dimashjanibekov.github.io/" target="_blank" rel="noopener noreferrer" data-ui="portfolio"></a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button></div>
+    </div>
+  </header>
   <div class="mobile-menu" aria-hidden="true"><nav><a href="#atlas" data-ui="navMap"></a><a href="#systems" data-ui="navSystems"></a><a href="#coverage" data-ui="navCoverage"></a><a href="#experiences" data-ui="navExperiences"></a><a href="#about" data-ui="navAbout"></a><a href="https://dizzyz7.github.io/dimashjanibekov.github.io/" target="_blank" rel="noopener noreferrer" data-ui="portfolio"></a></nav></div>
+
   <main id="main">
-    <section class="hero shell" id="top"><div class="hero-copy"><p class="kicker" data-ui="eyebrow"></p><h1 data-ui="heroTitle"></h1><p class="hero-lead" data-ui="heroLead"></p><div class="hero-actions"><a class="button button-primary" href="#atlas" data-ui="enterAtlas"></a><a class="button" href="https://dizzyz7.github.io/dimashjanibekov.github.io/" target="_blank" rel="noopener noreferrer" data-ui="openPortfolio"></a><a class="button button-quiet" href="https://github.com/DizzyZ7" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div><div class="hero-map" aria-hidden="true"><canvas id="hero-canvas"></canvas><div class="hero-core"><strong>DZ</strong><span>systems / architecture</span></div><span class="hero-label hero-label-a">Sentinel</span><span class="hero-label hero-label-b">StormRelay</span><span class="hero-label hero-label-c">SignalBox</span><span class="hero-label hero-label-d">AI Memo</span></div><div class="snapshot" aria-label="Atlas snapshot"><div><strong id="stat-projects">0</strong><span data-ui="indexed"></span></div><div><strong id="stat-domains">0</strong><span data-ui="domains"></span></div><div><strong id="stat-featured">0</strong><span data-ui="featured"></span></div></div></section>
+    <section class="hero shell" id="top">
+      <div class="hero-copy"><p class="kicker" data-ui="eyebrow"></p><h1 data-ui="heroTitle"></h1><p class="hero-lead" data-ui="heroLead"></p><div class="hero-actions"><a class="button button-primary" href="#atlas" data-ui="enterAtlas"></a><a class="button" href="https://dizzyz7.github.io/dimashjanibekov.github.io/" target="_blank" rel="noopener noreferrer" data-ui="openPortfolio"></a><a class="button button-quiet" href="https://github.com/DizzyZ7" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div>
+      <div class="hero-map" aria-hidden="true"><canvas id="hero-canvas"></canvas><div class="hero-core"><strong>DZ</strong><span>systems / architecture</span></div><span class="hero-label hero-label-a">Sentinel</span><span class="hero-label hero-label-b">StormRelay</span><span class="hero-label hero-label-c">SignalBox</span><span class="hero-label hero-label-d">AI Memo</span></div>
+      <div class="snapshot" aria-label="Atlas snapshot"><div><strong id="stat-projects">0</strong><span data-ui="indexed"></span></div><div><strong id="stat-domains">0</strong><span data-ui="domains"></span></div><div><strong id="stat-featured">0</strong><span data-ui="featured"></span></div></div>
+    </section>
+
     <section class="section section-soft" id="principle"><div class="shell split-head"><div><p class="kicker" data-ui="principleKicker"></p><h2 data-ui="principleTitle"></h2></div><div><p data-ui="principleText"></p><div class="tag-row" id="principle-tags"></div></div></div></section>
-    <section class="section" id="atlas"><div class="shell section-head"><div><p class="kicker" data-ui="mapKicker"></p><h2 data-ui="mapTitle"></h2></div><p data-ui="mapText"></p></div><div class="shell atlas-panel"><div class="atlas-toolbar"><label class="search-box"><span data-ui="searchLabel"></span><input id="project-search" type="search" autocomplete="off" /><kbd>/</kbd></label><div class="view-switch" role="group" aria-label="Atlas display mode"><button class="view-button is-active" type="button" data-view="graph" data-ui="graph"></button><button class="view-button" type="button" data-view="list" data-ui="list"></button></div></div><div class="category-strip" id="category-strip"></div><div class="atlas-stage"><canvas id="atlas-canvas" aria-label="Interactive project topology"></canvas><div class="atlas-hud"><div><small data-ui="activeFilter"></small><strong id="active-filter-label"></strong></div><div><small data-ui="visibleNodes"></small><strong id="visible-count">0</strong></div></div><button class="atlas-reset" type="button" data-ui="reset"></button></div><div class="atlas-list" id="atlas-list" hidden></div></div></section>
+
+    <section class="section" id="atlas">
+      <div class="shell section-head"><div><p class="kicker" data-ui="mapKicker"></p><h2 data-ui="mapTitle"></h2></div><p data-ui="mapText"></p></div>
+      <div class="shell atlas-panel">
+        <div class="atlas-toolbar">
+          <label class="search-box"><span data-ui="searchLabel"></span><input id="project-search" type="search" autocomplete="off" /><kbd>/</kbd></label>
+          <div class="view-switch" role="group" aria-label="Atlas display mode"><button class="view-button is-active" type="button" data-view="graph" data-ui="graph"></button><button class="view-button" type="button" data-view="list" data-ui="list"></button></div>
+        </div>
+        <div class="category-strip" id="category-strip" aria-label="Project categories"></div>
+        <div class="atlas-context-row">
+          <div class="atlas-legend" id="atlas-legend" aria-label="Map legend"></div>
+          <p class="atlas-guide" id="atlas-guide"></p>
+        </div>
+        <div class="atlas-stage">
+          <canvas id="atlas-canvas" tabindex="0" role="application" aria-label="Interactive project topology" aria-describedby="atlas-guide"></canvas>
+          <div class="atlas-hud"><div><small data-ui="activeFilter"></small><strong id="active-filter-label"></strong></div><div><small data-ui="visibleNodes"></small><strong id="visible-count">0</strong></div></div>
+          <div class="map-controls" aria-label="Map controls"><button type="button" data-map-action="zoom-out" aria-label="Zoom out">−</button><button type="button" data-map-action="zoom-in" aria-label="Zoom in">+</button><button type="button" data-map-action="fit" id="fit-map"></button><button type="button" data-map-action="reset" data-ui="reset"></button></div>
+          <aside class="atlas-inspector" id="atlas-inspector" aria-live="polite" hidden>
+            <div class="inspector-head"><span id="inspector-category"></span><button type="button" id="inspector-close" aria-label="Close selected system">×</button></div>
+            <h3 id="inspector-title"></h3><p id="inspector-summary"></p>
+            <div class="inspector-meta"><span id="inspector-relations"></span><span id="inspector-patterns"></span></div>
+            <div class="inspector-stack" id="inspector-stack"></div>
+            <div class="inspector-actions"><button type="button" id="inspector-details"></button><a id="inspector-repo" href="#" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+          </aside>
+          <div class="sr-only" id="map-live" aria-live="polite"></div>
+        </div>
+        <div class="atlas-list" id="atlas-list" hidden></div>
+      </div>
+    </section>
+
     <section class="section section-soft" id="systems"><div class="shell section-head"><div><p class="kicker" data-ui="systemsKicker"></p><h2 data-ui="systemsTitle"></h2></div><p data-ui="systemsText"></p></div><div class="shell featured-grid" id="featured-grid"></div></section>
     <section class="section" id="index"><div class="shell section-head index-head"><div><p class="kicker" data-ui="indexKicker"></p><h2 data-ui="indexTitle"></h2></div><div class="sort-switch"><button class="sort-button is-active" type="button" data-sort="featured" data-ui="featuredFirst"></button><button class="sort-button" type="button" data-sort="alpha" data-ui="az"></button><button class="sort-button" type="button" data-sort="category" data-ui="byDomain"></button></div></div><div class="shell project-grid" id="project-grid"></div><div class="shell empty-state" id="empty-state" hidden><strong data-ui="noSignal"></strong><p data-ui="noMatch"></p><button type="button" id="clear-filters" data-ui="clearFilters"></button></div></section>
     <section class="section section-ink" id="coverage"><div class="shell section-head"><div><p class="kicker" data-ui="coverageKicker"></p><h2 data-ui="coverageTitle"></h2></div><p data-ui="coverageText"></p></div><div class="shell coverage-table" id="coverage-table" role="table"></div></section>
@@ -36,11 +77,14 @@
     <section class="section section-soft" id="about"><div class="shell about-grid"><div class="about-mark" aria-hidden="true"><span>DZ</span></div><div class="about-copy"><p class="kicker" data-ui="aboutKicker"></p><h2 data-ui="aboutTitle"></h2><p class="about-lead" data-ui="aboutText"></p><div class="about-columns"><div><small data-ui="core"></small><div id="core-lines"></div></div><div><small data-ui="speciality"></small><div id="speciality-lines"></div></div></div><div class="about-links"><a href="https://github.com/DizzyZ7" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://t.me/dizzy_dev" target="_blank" rel="noopener noreferrer">Telegram ↗</a><a href="https://dizzyz7.github.io/dimashjanibekov.github.io/" target="_blank" rel="noopener noreferrer" data-ui="portfolio"></a></div></div></div></section>
     <section class="section contact-section"><div class="shell contact-grid"><div><p class="kicker" data-ui="contactKicker"></p><h2 data-ui="contactTitle"></h2></div><div><p data-ui="contactText"></p><a class="button button-primary" href="https://t.me/dizzy_dev" target="_blank" rel="noopener noreferrer" data-ui="startConversation"></a></div></div></section>
   </main>
-  <aside class="detail-drawer" aria-hidden="true" aria-label="Project details"><button class="drawer-close" type="button" aria-label="Close project details">×</button><div class="drawer-scroll"><div class="drawer-meta"><span class="drawer-index"></span><span class="drawer-status"></span></div><p class="drawer-domain"></p><h2 class="drawer-title"></h2><p class="drawer-summary"></p><section><small data-ui="drawerProblem"></small><p class="drawer-problem"></p></section><section><small data-ui="drawerArchitecture"></small><div class="architecture-flow" id="drawer-architecture"></div></section><section><small data-ui="drawerStack"></small><div class="drawer-tags" id="drawer-stack"></div></section><section><small data-ui="drawerSignals"></small><ul class="drawer-signals" id="drawer-signals"></ul></section><div class="drawer-actions"><a class="drawer-link" href="#" target="_blank" rel="noopener noreferrer" data-ui="openRepository"></a><a class="drawer-live" href="#" target="_blank" rel="noopener noreferrer" data-ui="openLive"></a></div><p class="drawer-private" data-ui="privateSource" hidden></p></div></aside><div class="drawer-backdrop" aria-hidden="true"></div>
+
+  <aside class="detail-drawer" aria-hidden="true" aria-label="Project details"><button class="drawer-close" type="button" aria-label="Close project details">×</button><div class="drawer-scroll"><div class="drawer-meta"><span class="drawer-index"></span><span class="drawer-status"></span></div><p class="drawer-domain"></p><h2 class="drawer-title"></h2><p class="drawer-summary"></p><section><small data-ui="drawerProblem"></small><p class="drawer-problem"></p></section><section><small data-ui="drawerArchitecture"></small><div class="architecture-flow" id="drawer-architecture"></div></section><section><small data-ui="drawerStack"></small><div class="drawer-tags" id="drawer-stack"></div></section><section><small data-ui="drawerSignals"></small><ul class="drawer-signals" id="drawer-signals"></ul></section><div class="drawer-actions"><a class="drawer-link" href="#" target="_blank" rel="noopener noreferrer" data-ui="openRepository"></a><a class="drawer-live" href="#" target="_blank" rel="noopener noreferrer" data-ui="openLive"></a></div><p class="drawer-private" data-ui="privateSource" hidden></p></div></aside>
+  <div class="drawer-backdrop" aria-hidden="true"></div>
   <footer class="site-footer"><div class="shell"><span>DizZy Systems Atlas · 2026</span><a href="#top">↑</a></div></footer>
-  <script src="scripts/projects.js?v=20260731-3"></script>
-  <script src="scripts/i18n.js?v=20260731-3"></script>
-  <script src="scripts/latest-projects.js?v=20260731-3"></script>
-  <script src="scripts/app.js?v=20260731-3"></script>
+
+  <script src="scripts/projects.js?v=20260731-4"></script>
+  <script src="scripts/i18n.js?v=20260731-4"></script>
+  <script src="scripts/latest-projects.js?v=20260731-4"></script>
+  <script src="scripts/app-v4.js?v=20260731-4"></script>
 </body>
 </html>
