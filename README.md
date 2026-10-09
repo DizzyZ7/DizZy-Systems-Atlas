@@ -30,6 +30,20 @@ The signature Canvas map is now a semantic engineering graph rather than a decor
 - SEO metadata, canonical URL, Open Graph and JSON-LD CollectionPage
 - safe external links with `noopener noreferrer`
 
+## October 2026 portfolio expansion
+
+The Atlas also covers active development, not only mature public repositories. Eight verified case entries were added to the interactive RU/EN catalog:
+
+| Private, source kept closed | Public, source inspectable |
+| --- | --- |
+| JANQOR — operational loss control plane (pilot engineering) | ChainScribe API — security-focused Django Ninja backend |
+| VINFLOW — CI-tested **local** B2B pilot prototype (not production-ready) | TOUCH GRASS.exe — Telegram game with persistent missions |
+| Catoku — actively developed Telegram logic game | CargoPulse — .NET logistics platform **foundation only** |
+| ISLUMI — playable island-world **test build** | |
+| PokéHub / Raid Lab — iterative Telegram game backend | |
+
+Private cases have `private: true` and an empty `repo` field. Public viewers can inspect product-level problems, patterns and stack without receiving private repository links. A private label is **not** proof of commercial use, client adoption or deployment. Project maturity stays explicit.
+
 ## Reading paths
 
 Atlas supports two complementary paths.
