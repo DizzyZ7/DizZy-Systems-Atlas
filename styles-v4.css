@@ -21,4 +21,4 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 
 /* Keep map recentering available to touch users; avoid overlapping the inspector. */
-@media(max-width:720px){.map-controls button[data-map-action="fit"]{display:inline-flex;align-items:center;justify-content:center;padding-inline:12px;min-width:52px}.map-controls{display:flex;flex-wrap:wrap;gap:7px;max-width:calc(100% - 20px)}.atlas-inspector:not([hidden])~.map-controls{pointer-events:none}}
+@media(max-width:720px){.map-controls button[data-map-action="fit"]{display:inline-flex;align-items:center;justify-content:center;padding-inline:12px;min-width:52px}.map-controls{display:flex;flex-wrap:wrap;gap:7px;max-width:calc(100% - 20px)}}
