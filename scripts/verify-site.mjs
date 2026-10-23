@@ -39,6 +39,13 @@ for (const token of requiredMarkup) if (!index.includes(token)) fail(`index.html
 
 if (index.includes('color-scheme" content="light dark"')) fail('Automatic light/dark color-scheme reintroduced; Atlas is intentionally dark.');
 
+const evidenceCss = fs.readFileSync('evidence-bridge.css', 'utf8');
+for (const token of ['id="review"', 'class="atlas-evidence"', 'evidence-bridge.css', 'ENGINEERING_EVIDENCE.md', 'data-ru=', 'data-en=']) {
+  if (!index.includes(token)) fail(`Engineering evidence bridge missing: ${token}`);
+}
+if (!app.includes("qa('.atlas-evidence [data-ru][data-en]')")) fail('Evidence bridge language switching is missing.');
+if (!evidenceCss.includes('max-width:760px') || !evidenceCss.includes('prefers-reduced-motion')) fail('Evidence bridge responsive/motion rules missing.');
+
 const requiredInteractions = ['pointerdown', 'pointerup', "addEventListener('wheel'", 'relationsFor', 'data-map-action', "addEventListener('keydown'"];
 for (const token of requiredInteractions) if (!app.includes(token)) fail(`Graph interaction missing: ${token}`);
 
