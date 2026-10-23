@@ -40,7 +40,7 @@ for (const token of requiredMarkup) if (!index.includes(token)) fail(`index.html
 if (index.includes('color-scheme" content="light dark"')) fail('Automatic light/dark color-scheme reintroduced; Atlas is intentionally dark.');
 
 const evidenceCss = fs.readFileSync('evidence-bridge.css', 'utf8');
-for (const token of ['id="review"', 'class="atlas-evidence"', 'evidence-bridge.css', 'ENGINEERING_EVIDENCE.md', 'data-ru=', 'data-en=']) {
+for (const token of ['id="review"', 'atlas-evidence__inner', 'evidence-bridge.css', 'ENGINEERING_EVIDENCE.md', 'data-ru=', 'data-en=']) {
   if (!index.includes(token)) fail(`Engineering evidence bridge missing: ${token}`);
 }
 if (!app.includes("qa('.atlas-evidence [data-ru][data-en]')")) fail('Evidence bridge language switching is missing.');
