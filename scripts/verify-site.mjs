@@ -52,6 +52,10 @@ for (const token of requiredInteractions) if (!app.includes(token)) fail(`Graph 
 if (!css.includes('@media(max-width:720px)')) fail('Mobile breakpoint is missing.');
 if (!css.includes('.coverage-row>span::before')) fail('Mobile engineering coverage labels are missing.');
 if (!css.includes('.atlas-inspector')) fail('Map inspector styles are missing.');
+for (const token of ['button[data-map-action="fit"]', '.atlas-stage:has(.atlas-inspector:not([hidden])) .map-controls', 'overscroll-behavior:contain']) {
+  if (!css.includes(token)) fail(`Mobile map UX contract missing: ${token}`);
+}
+
 
 if (!i18nSource.includes('ru:') || !i18nSource.includes('en:')) fail('RU/EN localization blocks are missing.');
 
