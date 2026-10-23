@@ -22,3 +22,6 @@
 
 /* Keep map recentering available to touch users; avoid overlapping the inspector. */
 @media(max-width:720px){.map-controls button[data-map-action="fit"]{display:inline-flex;align-items:center;justify-content:center;padding-inline:12px;min-width:52px}.map-controls{display:flex;flex-wrap:wrap;gap:7px;max-width:calc(100% - 20px)}}
+
+/* Give touch users reliable, visible map controls without covering the inspector. */
+@media(max-width:720px){.map-controls button{touch-action:manipulation}.atlas-stage:has(.atlas-inspector:not([hidden])) .map-controls{opacity:.35;pointer-events:none}.atlas-inspector:not([hidden]){max-height:min(48vh,340px);overflow:auto;overscroll-behavior:contain}}
